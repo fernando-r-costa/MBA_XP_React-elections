@@ -57,8 +57,10 @@ export default function Main() {
       try {
         const backEndAllElection = await apiGetAllElection(city.id);
 
-        setAllElection(backEndAllElection);
-        setWinner(backEndAllElection[0].candidateId);
+        if (backEndAllElection && backEndAllElection.length > 0) {
+          setAllElection(backEndAllElection);
+          setWinner(backEndAllElection[0].candidateId);
+        }
       } catch (error) {
         console.log(error.message);
       }

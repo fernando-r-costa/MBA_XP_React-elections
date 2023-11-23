@@ -38,10 +38,10 @@ export default function Panel({
         <h3 className="font-extrabold text-3xl">{winnerCandidate[0].name}</h3>
       </div>
       <ul className="flex gap-4 flex-wrap justify-center">
-        {election.map((cardCandidate) => {
+        {election.map((cardCandidate, index) => {
           return (
             <CardCandidate
-              key={cardCandidate.candidateId}
+              key={index}
               candidates={candidates}
               presence={presence}
               winner={winner}
