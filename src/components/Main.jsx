@@ -23,10 +23,6 @@ export default function Main() {
   );
   const city = { ...filteredCity[0] };
 
-  // const filteredElection = allElection.filter((election) =>
-  //   election.cityId.includes(city.id)
-  // );
-
   useEffect(() => {
     async function getAllCities() {
       try {
@@ -74,7 +70,7 @@ export default function Main() {
     setSelectCity(city);
   }
 
-  let mainJsx = <div className="flex justify-center my-4">Loading...</div>;
+  let mainJsx = <div className="flex justify-center my-4">Carregando...</div>;
 
   if (!loading) {
     mainJsx = (

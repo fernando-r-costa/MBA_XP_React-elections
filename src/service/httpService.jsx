@@ -1,9 +1,9 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:3004/",
+  // baseURL: "http://localhost:3001/",
+  baseURL: "https://banco-dados.vercel.app/",
   timeout: 10000,
-  // json-server --watch elections.json --port 3004
 });
 
 export async function read(url) {
