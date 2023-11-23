@@ -17,7 +17,7 @@ export default function CardCandidate({
       <span className="row-span-2 flex justify-center items-center">
         <img
           src={`./img/${candidate.username}.png`}
-          alt=""
+          alt={candidate.username}
           className="w-12 rounded-full"
         ></img>
       </span>
